@@ -1,0 +1,7 @@
+
+# vim
+*~
+
+# latex
+*.aux
+*.log
