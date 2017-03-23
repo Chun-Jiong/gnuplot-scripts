@@ -5,3 +5,5 @@
 # latex
 *.aux
 *.log
+*-inc.eps
+*-inc.pdf
