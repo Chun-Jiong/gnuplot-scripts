@@ -9,7 +9,7 @@ reset
 load '../colorbrewer/qualitative/Set1.plt'
 
 xl=0; xh=1; yl=-1; yh=1;
-eps=0.01;
+eps=0.010;
 rx=0.55; ry=0.8; kw=0.40; kh=0.15
 lh=0.06; al=0.1
 
@@ -20,7 +20,9 @@ set table 'shadowkey.dat'
 splot [xl:xh] [yl:yh] x/(xh-xl)
 unset table
 
-set object 1 rect from graph rx,ry rto kw,kh fc rgb "#aaaaaa" fs solid 1.0 front lw 0.0
+#set object 1 rect from graph rx,ry rto kw,kh fc rgb "#aaaaaa" fs solid 1.0 lw 0.0 front
+#set object 2 rect from graph rx-eps,ry+eps rto kw,kh fs border rgb "#FFFFFF" front
+set object 1 rect from graph rx,ry rto kw,kh fc rgb "#aaaaaa" fs solid 1.0 border rgb "#aaaaaa" front
 set object 2 rect from graph rx-eps,ry+eps rto kw,kh front
 set label 1 at graph 1.1*al+rx, ry+2*lh key1 front
 set label 2 at graph 1.1*al+rx, ry+lh key2 front
