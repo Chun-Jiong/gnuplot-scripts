@@ -1,12 +1,14 @@
 
 LGFILES = *~ *.tex *.aux *-inc.eps *-inc.pdf *.log
+#view="evince"
+view="open"
 
 ifdef FILE
 single:
 	-gnuplot $(FILE)
 	-epstopdf $$(echo $(FILE)| sed "s#.gp#-inc.eps#g")
 	-pdflatex $$(echo $(FILE)| sed "s#.gp#.tex#g")
-	-evince $$(echo $(FILE)| sed "s#.gp#.pdf#g") &
+	-$(view) $$(echo $(FILE)| sed "s#.gp#.pdf#g") &
 
 show:
 	-evince $$(echo $(FILE)| sed "s#.gp#.pdf#g") &

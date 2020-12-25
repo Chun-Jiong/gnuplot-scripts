@@ -1,5 +1,5 @@
 
-load '../colorbrewer/qualitative/Set1.plt'
+load "~/Documents/GitHub/gnuplot-scripts/colorbrewer/qualitative/Set1.plt"
 set terminal epslatex standalone color 8 size 3.2in,2.4in
 
 #set offset 0.0, 0.0, graph 0.0, graph 0.0
